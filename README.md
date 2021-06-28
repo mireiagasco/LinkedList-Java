@@ -29,7 +29,7 @@ The methods implemented for this list are:
 * `delete(data)`: deletes the element that contains the data passed as an argument.  Can cause a `DeletionError` if the element cannot be deleted or a `NotFoundError` if the data is not in the list.
 
 Moreover, some additional methods have been implemented to provide functionality to the PDI, so it can be freely moved through the list positions:
-* `current()`: returns the data from the current PDI position.
+* `current()`: returns the data from the current PDI position.  Can cause a `ErrorPDI` if the PDI is out of the list.
 * `PDIToStart()`: moves the PDI to the beginning of the list.
 * `PDIToEnd()`: moves the PDI to the end of the list.
 * `PDIToNext()`: moves the PDI to the next position.
@@ -41,5 +41,5 @@ The `PDIToNext()` and `PDIToPrev()` methods can cause an `ErrorPDI` exception in
 The exceptions used are:
 * `DeleteError`: in case the delete methods cannot delete the element.
 * `InsertionError`: in case the `insert()` method cannot successfully insert an element.
-* `ErrorPDI`: in case the `PDIToNext()` or `PDIToPrev()` methods are called and the PDI cannot be moved tho the asked position.
+* `ErrorPDI`: in case the `PDIToNext()` or `PDIToPrev()` methods are called and the PDI cannot be moved tho the asked position or if the `current()` method is called when the PDI is out of the list.
 * `NotFoundError`: in case the `delete(data)` method cannot find the data in the list.
