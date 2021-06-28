@@ -19,7 +19,7 @@ This nodes are used to build the list, which consists of the following elements:
 ![PDI graph](https://github.com/mireiagasco/LinkedList-Java/blob/main/images/LinkedListPDI.png)
 
 
-## Implemented Methods
+## Methods
 The methods implemented for this list are:
 * `Constructor`: creates an empty list.
 * `iterator()`: can be used to iterate over the list with the `hasNext()` and `next()` methods from the interface.
@@ -37,7 +37,7 @@ Moreover, some additional methods have been implemented to provide functionality
 
 The `PDIToNext()` and `PDIToPrev()` methods can cause an `ErrorPDI` exception in case the PDI cannot be moved forwards or backwards (when it is already in the first or last position available).
 
-## Implemented Exceptions
+## Exceptions
 The exceptions used are:
 * `DeleteError`: in case the delete methods cannot delete the element.
 * `InsertionError`: in case the `insert()` method cannot successfully insert an element.
