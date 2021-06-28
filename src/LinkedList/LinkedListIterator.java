@@ -29,11 +29,12 @@ public class LinkedListIterator<T> implements Iterator<T> {
     }
 
     @Override
-    public T next() {
+    public T next(){
         try {
             llista.PDIToNext();
+            return llista.current();
         }
         catch (ErrorPDI e){ }
-        return llista.current();
+        return null;
     }
 }

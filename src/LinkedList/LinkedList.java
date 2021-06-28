@@ -168,7 +168,9 @@ public class LinkedList<T> {
 
 
     //Methods to operate with the pdi
-    public T current(){
+    public T current() throws ErrorPDI{
+        if (pdi == null) throw new ErrorPDI("The PDI is out of the list");
+
         return (T)pdi.data;
     }
 
